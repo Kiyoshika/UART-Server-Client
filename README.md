@@ -1,5 +1,5 @@
 # STM32 Bare Metal - UART Server/Client
-This project shows how to make two MCUs communicate with each other over UART.
+This project shows how to make two MCUs communicate with each other over UART without the use of any libraries (except device headers).
 
 ## Project Description
 A "server" MCU is set up to send alternating bits of 1 and 0 to a "client" MCU. The client reads that data and turns an LED on if the bit received was 1 and turns the LED off if the bit received was 0.
