@@ -1,0 +1,320 @@
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.fake_delay,"ax",%progbits
+  20              		.align	1
+  21              		.global	fake_delay
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	fake_delay:
+  27              	.LFB130:
+  28              		.file 1 "Core/Src/main.c"
+   1:Core/Src/main.c **** #include "stm32f411xe.h"
+   2:Core/Src/main.c **** #include <stdint.h>
+   3:Core/Src/main.c **** 
+   4:Core/Src/main.c **** // NOTE: MUST use no compiler optimizations otherwise the loops get optimized out
+   5:Core/Src/main.c **** void fake_delay()
+   6:Core/Src/main.c **** {
+  29              		.loc 1 6 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 80B4     		push	{r7}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 4
+  37              		.cfi_offset 7, -4
+  38 0002 83B0     		sub	sp, sp, #12
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 16
+  41 0004 00AF     		add	r7, sp, #0
+  42              	.LCFI2:
+  43              		.cfi_def_cfa_register 7
+  44              	.LBB2:
+   7:Core/Src/main.c ****     for (uint32_t i = 0; i < 500000; ++i);
+  45              		.loc 1 7 19
+  46 0006 0023     		movs	r3, #0
+  47 0008 7B60     		str	r3, [r7, #4]
+  48              		.loc 1 7 5
+  49 000a 02E0     		b	.L2
+  50              	.L3:
+  51              		.loc 1 7 38 discriminator 3
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 2
+
+
+  52 000c 7B68     		ldr	r3, [r7, #4]
+  53 000e 0133     		adds	r3, r3, #1
+  54 0010 7B60     		str	r3, [r7, #4]
+  55              	.L2:
+  56              		.loc 1 7 5 discriminator 1
+  57 0012 7B68     		ldr	r3, [r7, #4]
+  58 0014 044A     		ldr	r2, .L4
+  59 0016 9342     		cmp	r3, r2
+  60 0018 F8D9     		bls	.L3
+  61              	.LBE2:
+   8:Core/Src/main.c **** }
+  62              		.loc 1 8 1
+  63 001a 00BF     		nop
+  64 001c 00BF     		nop
+  65 001e 0C37     		adds	r7, r7, #12
+  66              	.LCFI3:
+  67              		.cfi_def_cfa_offset 4
+  68 0020 BD46     		mov	sp, r7
+  69              	.LCFI4:
+  70              		.cfi_def_cfa_register 13
+  71              		@ sp needed
+  72 0022 5DF8047B 		ldr	r7, [sp], #4
+  73              	.LCFI5:
+  74              		.cfi_restore 7
+  75              		.cfi_def_cfa_offset 0
+  76 0026 7047     		bx	lr
+  77              	.L5:
+  78              		.align	2
+  79              	.L4:
+  80 0028 1FA10700 		.word	499999
+  81              		.cfi_endproc
+  82              	.LFE130:
+  84              		.section	.text.main,"ax",%progbits
+  85              		.align	1
+  86              		.global	main
+  87              		.syntax unified
+  88              		.thumb
+  89              		.thumb_func
+  91              	main:
+  92              	.LFB131:
+   9:Core/Src/main.c **** 
+  10:Core/Src/main.c **** int main()
+  11:Core/Src/main.c **** {
+  93              		.loc 1 11 1
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 8
+  96              		@ frame_needed = 1, uses_anonymous_args = 0
+  97 0000 80B5     		push	{r7, lr}
+  98              	.LCFI6:
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 7, -8
+ 101              		.cfi_offset 14, -4
+ 102 0002 82B0     		sub	sp, sp, #8
+ 103              	.LCFI7:
+ 104              		.cfi_def_cfa_offset 16
+ 105 0004 00AF     		add	r7, sp, #0
+ 106              	.LCFI8:
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 3
+
+
+ 107              		.cfi_def_cfa_register 7
+  12:Core/Src/main.c **** 
+  13:Core/Src/main.c ****     // setup clocks
+  14:Core/Src/main.c ****     RCC->AHB1ENR &= ~RCC_AHB1ENR_GPIOAEN; // reset bit
+ 108              		.loc 1 14 18
+ 109 0006 3B4B     		ldr	r3, .L9
+ 110 0008 1B6B     		ldr	r3, [r3, #48]
+ 111 000a 3A4A     		ldr	r2, .L9
+ 112 000c 23F00103 		bic	r3, r3, #1
+ 113 0010 1363     		str	r3, [r2, #48]
+  15:Core/Src/main.c ****     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; // enable GPIOA clock
+ 114              		.loc 1 15 18
+ 115 0012 384B     		ldr	r3, .L9
+ 116 0014 1B6B     		ldr	r3, [r3, #48]
+ 117 0016 374A     		ldr	r2, .L9
+ 118 0018 43F00103 		orr	r3, r3, #1
+ 119 001c 1363     		str	r3, [r2, #48]
+  16:Core/Src/main.c ****     RCC->APB2ENR &= ~RCC_APB2ENR_USART1EN; // reset bit
+ 120              		.loc 1 16 18
+ 121 001e 354B     		ldr	r3, .L9
+ 122 0020 5B6C     		ldr	r3, [r3, #68]
+ 123 0022 344A     		ldr	r2, .L9
+ 124 0024 23F01003 		bic	r3, r3, #16
+ 125 0028 5364     		str	r3, [r2, #68]
+  17:Core/Src/main.c ****     RCC->APB2ENR |= RCC_APB2ENR_USART1EN; // enable USART1 clock
+ 126              		.loc 1 17 18
+ 127 002a 324B     		ldr	r3, .L9
+ 128 002c 5B6C     		ldr	r3, [r3, #68]
+ 129 002e 314A     		ldr	r2, .L9
+ 130 0030 43F01003 		orr	r3, r3, #16
+ 131 0034 5364     		str	r3, [r2, #68]
+  18:Core/Src/main.c **** 
+  19:Core/Src/main.c ****     // setup PA9
+  20:Core/Src/main.c ****     GPIOA->MODER &= ~(3 << 18); // reset bits
+ 132              		.loc 1 20 18
+ 133 0036 304B     		ldr	r3, .L9+4
+ 134 0038 1B68     		ldr	r3, [r3]
+ 135 003a 2F4A     		ldr	r2, .L9+4
+ 136 003c 23F44023 		bic	r3, r3, #786432
+ 137 0040 1360     		str	r3, [r2]
+  21:Core/Src/main.c ****     GPIOA->MODER |= (2 << 18); // set PA9 as alternate function
+ 138              		.loc 1 21 18
+ 139 0042 2D4B     		ldr	r3, .L9+4
+ 140 0044 1B68     		ldr	r3, [r3]
+ 141 0046 2C4A     		ldr	r2, .L9+4
+ 142 0048 43F40023 		orr	r3, r3, #524288
+ 143 004c 1360     		str	r3, [r2]
+  22:Core/Src/main.c ****     GPIOA->AFR[1] &= ~(0xF << 4); // reset bits
+ 144              		.loc 1 22 19
+ 145 004e 2A4B     		ldr	r3, .L9+4
+ 146 0050 5B6A     		ldr	r3, [r3, #36]
+ 147 0052 294A     		ldr	r2, .L9+4
+ 148 0054 23F0F003 		bic	r3, r3, #240
+ 149 0058 5362     		str	r3, [r2, #36]
+  23:Core/Src/main.c ****     GPIOA->AFR[1] |= (7 << 4); // set alternate function register for line 10
+ 150              		.loc 1 23 19
+ 151 005a 274B     		ldr	r3, .L9+4
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 4
+
+
+ 152 005c 5B6A     		ldr	r3, [r3, #36]
+ 153 005e 264A     		ldr	r2, .L9+4
+ 154 0060 43F07003 		orr	r3, r3, #112
+ 155 0064 5362     		str	r3, [r2, #36]
+  24:Core/Src/main.c **** 
+  25:Core/Src/main.c ****     // setup USART1
+  26:Core/Src/main.c ****     USART1->CR1 &= ~(1 << 13); // reset bit
+ 156              		.loc 1 26 17
+ 157 0066 254B     		ldr	r3, .L9+8
+ 158 0068 DB68     		ldr	r3, [r3, #12]
+ 159 006a 244A     		ldr	r2, .L9+8
+ 160 006c 23F40053 		bic	r3, r3, #8192
+ 161 0070 D360     		str	r3, [r2, #12]
+  27:Core/Src/main.c ****     USART1->CR1 |= (1 << 13); // enable USART
+ 162              		.loc 1 27 17
+ 163 0072 224B     		ldr	r3, .L9+8
+ 164 0074 DB68     		ldr	r3, [r3, #12]
+ 165 0076 214A     		ldr	r2, .L9+8
+ 166 0078 43F40053 		orr	r3, r3, #8192
+ 167 007c D360     		str	r3, [r2, #12]
+  28:Core/Src/main.c ****     USART1->CR1 &= ~(1 << 3); // reset bit
+ 168              		.loc 1 28 17
+ 169 007e 1F4B     		ldr	r3, .L9+8
+ 170 0080 DB68     		ldr	r3, [r3, #12]
+ 171 0082 1E4A     		ldr	r2, .L9+8
+ 172 0084 23F00803 		bic	r3, r3, #8
+ 173 0088 D360     		str	r3, [r2, #12]
+  29:Core/Src/main.c ****     USART1->CR1 |= (1 << 3); // enable transmitter
+ 174              		.loc 1 29 17
+ 175 008a 1C4B     		ldr	r3, .L9+8
+ 176 008c DB68     		ldr	r3, [r3, #12]
+ 177 008e 1B4A     		ldr	r2, .L9+8
+ 178 0090 43F00803 		orr	r3, r3, #8
+ 179 0094 D360     		str	r3, [r2, #12]
+  30:Core/Src/main.c **** 
+  31:Core/Src/main.c ****     // setup baud rate to 115200 (default clock speed = 16MHz)
+  32:Core/Src/main.c ****     USART1->BRR &= ~(0xFFF << 4); // reset bits
+ 180              		.loc 1 32 17
+ 181 0096 194B     		ldr	r3, .L9+8
+ 182 0098 9B68     		ldr	r3, [r3, #8]
+ 183 009a 184A     		ldr	r2, .L9+8
+ 184 009c 23F47F43 		bic	r3, r3, #65280
+ 185 00a0 23F0F003 		bic	r3, r3, #240
+ 186 00a4 9360     		str	r3, [r2, #8]
+  33:Core/Src/main.c ****     USART1->BRR |= (8 << 4); // mantissa = 8
+ 187              		.loc 1 33 17
+ 188 00a6 154B     		ldr	r3, .L9+8
+ 189 00a8 9B68     		ldr	r3, [r3, #8]
+ 190 00aa 144A     		ldr	r2, .L9+8
+ 191 00ac 43F08003 		orr	r3, r3, #128
+ 192 00b0 9360     		str	r3, [r2, #8]
+  34:Core/Src/main.c ****     USART1->BRR &= ~(0xF << 0); // reset bits
+ 193              		.loc 1 34 17
+ 194 00b2 124B     		ldr	r3, .L9+8
+ 195 00b4 9B68     		ldr	r3, [r3, #8]
+ 196 00b6 114A     		ldr	r2, .L9+8
+ 197 00b8 23F00F03 		bic	r3, r3, #15
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 5
+
+
+ 198 00bc 9360     		str	r3, [r2, #8]
+  35:Core/Src/main.c ****     USART1->BRR |= (11 << 0); // fraction = 11
+ 199              		.loc 1 35 17
+ 200 00be 0F4B     		ldr	r3, .L9+8
+ 201 00c0 9B68     		ldr	r3, [r3, #8]
+ 202 00c2 0E4A     		ldr	r2, .L9+8
+ 203 00c4 43F00B03 		orr	r3, r3, #11
+ 204 00c8 9360     		str	r3, [r2, #8]
+  36:Core/Src/main.c **** 
+  37:Core/Src/main.c ****     uint8_t uart_tx_value = 3;
+ 205              		.loc 1 37 13
+ 206 00ca 0323     		movs	r3, #3
+ 207 00cc FB71     		strb	r3, [r7, #7]
+  38:Core/Src/main.c ****     GPIOA->ODR |= (1 << 3);
+ 208              		.loc 1 38 16
+ 209 00ce 0A4B     		ldr	r3, .L9+4
+ 210 00d0 5B69     		ldr	r3, [r3, #20]
+ 211 00d2 094A     		ldr	r2, .L9+4
+ 212 00d4 43F00803 		orr	r3, r3, #8
+ 213 00d8 5361     		str	r3, [r2, #20]
+ 214              	.L8:
+  39:Core/Src/main.c **** 
+  40:Core/Src/main.c ****     while(1)
+  41:Core/Src/main.c ****     {
+  42:Core/Src/main.c ****         while (!(USART1->SR & USART_SR_TXE));
+ 215              		.loc 1 42 15
+ 216 00da 00BF     		nop
+ 217              	.L7:
+ 218              		.loc 1 42 24 discriminator 1
+ 219 00dc 074B     		ldr	r3, .L9+8
+ 220 00de 1B68     		ldr	r3, [r3]
+ 221              		.loc 1 42 29 discriminator 1
+ 222 00e0 03F08003 		and	r3, r3, #128
+ 223              		.loc 1 42 15 discriminator 1
+ 224 00e4 002B     		cmp	r3, #0
+ 225 00e6 F9D0     		beq	.L7
+  43:Core/Src/main.c ****         USART1->DR = 19;
+ 226              		.loc 1 43 15
+ 227 00e8 044B     		ldr	r3, .L9+8
+ 228              		.loc 1 43 20
+ 229 00ea 1322     		movs	r2, #19
+ 230 00ec 5A60     		str	r2, [r3, #4]
+  44:Core/Src/main.c ****         fake_delay();
+ 231              		.loc 1 44 9
+ 232 00ee FFF7FEFF 		bl	fake_delay
+  42:Core/Src/main.c ****         USART1->DR = 19;
+ 233              		.loc 1 42 15
+ 234 00f2 F2E7     		b	.L8
+ 235              	.L10:
+ 236              		.align	2
+ 237              	.L9:
+ 238 00f4 00380240 		.word	1073887232
+ 239 00f8 00000240 		.word	1073872896
+ 240 00fc 00100140 		.word	1073811456
+ 241              		.cfi_endproc
+ 242              	.LFE131:
+ 244              		.text
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 6
+
+
+ 245              	.Letext0:
+ 246              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 247              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 248              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:20     .text.fake_delay:00000000 $t
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:26     .text.fake_delay:00000000 fake_delay
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:80     .text.fake_delay:00000028 $d
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:85     .text.main:00000000 $t
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:91     .text.main:00000000 main
+C:\Users\zach_\AppData\Local\Temp\ccCWxkwA.s:238    .text.main:000000f4 $d
+
+NO UNDEFINED SYMBOLS
