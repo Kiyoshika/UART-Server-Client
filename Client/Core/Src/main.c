@@ -34,10 +34,10 @@ int main()
     while(1)
     {
         // wait for data to be received
-        while (!(USART1->ISR & USART_ISR_RXNE));
+        while (!(USART1->ISR & (1 << 5)));
         uart_rx_value = USART1->RDR;
-        if (uart_rx_value == 19)
-            GPIOA->ODR ^= (1 << 1);
+        GPIOA->ODR &= ~(1 << 1);
+        GPIOA->ODR |= (uart_rx_value << 1);
     }
     return 0;
 }

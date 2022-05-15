@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
   48 0010 23F00103 		bic	r3, r3, #1
   49 0014 D364     		str	r3, [r2, #76]
    9:Core/Src/main.c ****     RCC->AHB2ENR |= (1 << 0); // enable GPIOA clock
-ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 2
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s 			page 2
 
 
   50              		.loc 1 9 18
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
   93 0086 4FF09043 		mov	r3, #1207959552
   94 008a 5B6A     		ldr	r3, [r3, #36]
   95 008c 4FF09042 		mov	r2, #1207959552
-ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 3
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s 			page 3
 
 
   96 0090 23F47063 		bic	r3, r3, #3840
@@ -134,37 +134,37 @@ ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
   23:Core/Src/main.c ****     // setup USART1
   24:Core/Src/main.c ****     USART1->CR1 &= ~(1 << 0); // reset bit
  104              		.loc 1 24 17
- 105 00a6 194B     		ldr	r3, .L5
+ 105 00a6 1D4B     		ldr	r3, .L4
  106 00a8 1B68     		ldr	r3, [r3]
- 107 00aa 184A     		ldr	r2, .L5
+ 107 00aa 1C4A     		ldr	r2, .L4
  108 00ac 23F00103 		bic	r3, r3, #1
  109 00b0 1360     		str	r3, [r2]
   25:Core/Src/main.c ****     USART1->CR1 |= (1 << 0); // enable USART
  110              		.loc 1 25 17
- 111 00b2 164B     		ldr	r3, .L5
+ 111 00b2 1A4B     		ldr	r3, .L4
  112 00b4 1B68     		ldr	r3, [r3]
- 113 00b6 154A     		ldr	r2, .L5
+ 113 00b6 194A     		ldr	r2, .L4
  114 00b8 43F00103 		orr	r3, r3, #1
  115 00bc 1360     		str	r3, [r2]
   26:Core/Src/main.c ****     USART1->CR1 &= ~(1 << 2); // reset bit
  116              		.loc 1 26 17
- 117 00be 134B     		ldr	r3, .L5
+ 117 00be 174B     		ldr	r3, .L4
  118 00c0 1B68     		ldr	r3, [r3]
- 119 00c2 124A     		ldr	r2, .L5
+ 119 00c2 164A     		ldr	r2, .L4
  120 00c4 23F00403 		bic	r3, r3, #4
  121 00c8 1360     		str	r3, [r2]
   27:Core/Src/main.c ****     USART1->CR1 |= (1 << 2); // enable receiver
  122              		.loc 1 27 17
- 123 00ca 104B     		ldr	r3, .L5
+ 123 00ca 144B     		ldr	r3, .L4
  124 00cc 1B68     		ldr	r3, [r3]
- 125 00ce 0F4A     		ldr	r2, .L5
+ 125 00ce 134A     		ldr	r2, .L4
  126 00d0 43F00403 		orr	r3, r3, #4
  127 00d4 1360     		str	r3, [r2]
   28:Core/Src/main.c **** 
   29:Core/Src/main.c ****     // setup baud rate to 115200 (default clock speed = 4MHz)
   30:Core/Src/main.c ****     USART1->BRR = (4000000/115200);
  128              		.loc 1 30 11
- 129 00d6 0D4B     		ldr	r3, .L5
+ 129 00d6 114B     		ldr	r3, .L4
  130              		.loc 1 30 17
  131 00d8 2222     		movs	r2, #34
  132 00da DA60     		str	r2, [r3, #12]
@@ -173,20 +173,20 @@ ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
  133              		.loc 1 32 13
  134 00dc 0023     		movs	r3, #0
  135 00de FB71     		strb	r3, [r7, #7]
- 136              	.L4:
+ 136              	.L3:
   33:Core/Src/main.c **** 
   34:Core/Src/main.c ****     while(1)
   35:Core/Src/main.c ****     {
   36:Core/Src/main.c ****         // wait for data to be received
-ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 4
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s 			page 4
 
 
-  37:Core/Src/main.c ****         while (!(USART1->ISR & USART_ISR_RXNE));
- 137              		.loc 1 37 15 discriminator 1
+  37:Core/Src/main.c ****         while (!(USART1->ISR & (1 << 5)));
+ 137              		.loc 1 37 15
  138 00e0 00BF     		nop
  139              	.L2:
  140              		.loc 1 37 24 discriminator 1
- 141 00e2 0A4B     		ldr	r3, .L5
+ 141 00e2 0E4B     		ldr	r3, .L4
  142 00e4 DB69     		ldr	r3, [r3, #28]
  143              		.loc 1 37 30 discriminator 1
  144 00e6 03F02003 		and	r3, r3, #32
@@ -195,43 +195,50 @@ ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 1
  147 00ec F9D0     		beq	.L2
   38:Core/Src/main.c ****         uart_rx_value = USART1->RDR;
  148              		.loc 1 38 31
- 149 00ee 074B     		ldr	r3, .L5
+ 149 00ee 0B4B     		ldr	r3, .L4
  150 00f0 5B6A     		ldr	r3, [r3, #36]
  151              		.loc 1 38 23
  152 00f2 FB71     		strb	r3, [r7, #7]
-  39:Core/Src/main.c ****         if (uart_rx_value == 19)
- 153              		.loc 1 39 12
- 154 00f4 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 155 00f6 132B     		cmp	r3, #19
- 156 00f8 F2D1     		bne	.L4
-  40:Core/Src/main.c ****             GPIOA->ODR ^= (1 << 1);
- 157              		.loc 1 40 24
- 158 00fa 4FF09043 		mov	r3, #1207959552
- 159 00fe 5B69     		ldr	r3, [r3, #20]
- 160 0100 4FF09042 		mov	r2, #1207959552
- 161 0104 83F00203 		eor	r3, r3, #2
- 162 0108 5361     		str	r3, [r2, #20]
+  39:Core/Src/main.c ****         GPIOA->ODR &= ~(1 << 1);
+ 153              		.loc 1 39 20
+ 154 00f4 4FF09043 		mov	r3, #1207959552
+ 155 00f8 5B69     		ldr	r3, [r3, #20]
+ 156 00fa 4FF09042 		mov	r2, #1207959552
+ 157 00fe 23F00203 		bic	r3, r3, #2
+ 158 0102 5361     		str	r3, [r2, #20]
+  40:Core/Src/main.c ****         GPIOA->ODR |= (uart_rx_value << 1);
+ 159              		.loc 1 40 20
+ 160 0104 4FF09043 		mov	r3, #1207959552
+ 161 0108 5B69     		ldr	r3, [r3, #20]
+ 162              		.loc 1 40 38
+ 163 010a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 164 010c 5200     		lsls	r2, r2, #1
+ 165 010e 1146     		mov	r1, r2
+ 166              		.loc 1 40 20
+ 167 0110 4FF09042 		mov	r2, #1207959552
+ 168 0114 0B43     		orrs	r3, r3, r1
+ 169 0116 5361     		str	r3, [r2, #20]
   37:Core/Src/main.c ****         uart_rx_value = USART1->RDR;
- 163              		.loc 1 37 15
- 164 010a E9E7     		b	.L4
- 165              	.L6:
- 166              		.align	2
- 167              	.L5:
- 168 010c 00380140 		.word	1073821696
- 169              		.cfi_endproc
- 170              	.LFE135:
- 172              		.text
- 173              	.Letext0:
- 174              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 175              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 176              		.file 4 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
-ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s 			page 5
+ 170              		.loc 1 37 15
+ 171 0118 E2E7     		b	.L3
+ 172              	.L5:
+ 173 011a 00BF     		.align	2
+ 174              	.L4:
+ 175 011c 00380140 		.word	1073821696
+ 176              		.cfi_endproc
+ 177              	.LFE135:
+ 179              		.text
+ 180              	.Letext0:
+ 181              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 182              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 183              		.file 4 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ARM GAS  C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s:20     .text.main:00000000 $t
-C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s:26     .text.main:00000000 main
-C:\Users\zach_\AppData\Local\Temp\ccdO3Qou.s:168    .text.main:0000010c $d
+C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s:20     .text.main:00000000 $t
+C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s:26     .text.main:00000000 main
+C:\Users\zach_\AppData\Local\Temp\ccMfpmtF.s:175    .text.main:0000011c $d
 
 NO UNDEFINED SYMBOLS

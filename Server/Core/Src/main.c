@@ -34,15 +34,16 @@ int main()
     USART1->BRR &= ~(0xF << 0); // reset bits
     USART1->BRR |= (11 << 0); // fraction = 11
 
-    uint8_t uart_tx_value = 3;
+    uint8_t uart_tx_value = 0;
     GPIOA->ODR |= (1 << 3);
 
     while(1)
     {
-        while (!(USART1->SR & USART_SR_TXE));
-        USART1->DR = 19;
+        // when TXE bit is set (1 << 7), TDR register is empty and next data can be written in DR register without overwriting previous data
+        while (!(USART1->SR & (1 << 7)));
+        USART1->DR = uart_tx_value;
         fake_delay();
-
+        uart_tx_value = 1 - uart_tx_value;
     }
     return 0;
 }

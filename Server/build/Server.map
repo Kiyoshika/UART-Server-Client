@@ -127,7 +127,7 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x08000000                g_pfnVectors
                 0x08000198                . = ALIGN (0x4)
 
-.text           0x08000198      0x244
+.text           0x08000198      0x24c
                 0x08000198                . = ALIGN (0x4)
  *(.text)
  .text          0x08000198       0x40 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -135,151 +135,151 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .text.fake_delay
                 0x080001d8       0x2c build/main.o
                 0x080001d8                fake_delay
- .text.main     0x08000204      0x100 build/main.o
+ .text.main     0x08000204      0x108 build/main.o
                 0x08000204                main
  .text.SystemInit
-                0x08000304       0x24 build/system_stm32f4xx.o
-                0x08000304                SystemInit
+                0x0800030c       0x24 build/system_stm32f4xx.o
+                0x0800030c                SystemInit
  .text.Reset_Handler
-                0x08000328       0x50 build/startup_stm32f411xe.o
-                0x08000328                Reset_Handler
+                0x08000330       0x50 build/startup_stm32f411xe.o
+                0x08000330                Reset_Handler
  .text.Default_Handler
-                0x08000378        0x2 build/startup_stm32f411xe.o
-                0x08000378                RTC_Alarm_IRQHandler
-                0x08000378                EXTI2_IRQHandler
-                0x08000378                DebugMon_Handler
-                0x08000378                SPI4_IRQHandler
-                0x08000378                TIM1_CC_IRQHandler
-                0x08000378                DMA2_Stream5_IRQHandler
-                0x08000378                HardFault_Handler
-                0x08000378                DMA1_Stream5_IRQHandler
-                0x08000378                SysTick_Handler
-                0x08000378                PVD_IRQHandler
-                0x08000378                SDIO_IRQHandler
-                0x08000378                TAMP_STAMP_IRQHandler
-                0x08000378                PendSV_Handler
-                0x08000378                NMI_Handler
-                0x08000378                EXTI3_IRQHandler
-                0x08000378                TIM1_UP_TIM10_IRQHandler
-                0x08000378                I2C3_ER_IRQHandler
-                0x08000378                EXTI0_IRQHandler
-                0x08000378                I2C2_EV_IRQHandler
-                0x08000378                DMA1_Stream2_IRQHandler
-                0x08000378                FPU_IRQHandler
-                0x08000378                UsageFault_Handler
-                0x08000378                DMA2_Stream2_IRQHandler
-                0x08000378                SPI1_IRQHandler
-                0x08000378                TIM1_BRK_TIM9_IRQHandler
-                0x08000378                DMA2_Stream3_IRQHandler
-                0x08000378                USART6_IRQHandler
-                0x08000378                DMA2_Stream0_IRQHandler
-                0x08000378                TIM4_IRQHandler
-                0x08000378                I2C1_EV_IRQHandler
-                0x08000378                DMA1_Stream6_IRQHandler
-                0x08000378                DMA1_Stream1_IRQHandler
-                0x08000378                TIM3_IRQHandler
-                0x08000378                RCC_IRQHandler
-                0x08000378                Default_Handler
-                0x08000378                EXTI15_10_IRQHandler
-                0x08000378                ADC_IRQHandler
-                0x08000378                DMA1_Stream7_IRQHandler
-                0x08000378                SPI5_IRQHandler
-                0x08000378                TIM5_IRQHandler
-                0x08000378                DMA2_Stream7_IRQHandler
-                0x08000378                I2C3_EV_IRQHandler
-                0x08000378                EXTI9_5_IRQHandler
-                0x08000378                RTC_WKUP_IRQHandler
-                0x08000378                SPI2_IRQHandler
-                0x08000378                MemManage_Handler
-                0x08000378                DMA1_Stream0_IRQHandler
-                0x08000378                SVC_Handler
-                0x08000378                EXTI4_IRQHandler
-                0x08000378                WWDG_IRQHandler
-                0x08000378                TIM2_IRQHandler
-                0x08000378                OTG_FS_WKUP_IRQHandler
-                0x08000378                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08000378                EXTI1_IRQHandler
-                0x08000378                USART2_IRQHandler
-                0x08000378                I2C2_ER_IRQHandler
-                0x08000378                DMA2_Stream1_IRQHandler
-                0x08000378                FLASH_IRQHandler
-                0x08000378                DMA2_Stream4_IRQHandler
-                0x08000378                BusFault_Handler
-                0x08000378                USART1_IRQHandler
-                0x08000378                OTG_FS_IRQHandler
-                0x08000378                SPI3_IRQHandler
-                0x08000378                DMA1_Stream4_IRQHandler
-                0x08000378                I2C1_ER_IRQHandler
-                0x08000378                DMA2_Stream6_IRQHandler
-                0x08000378                DMA1_Stream3_IRQHandler
- *fill*         0x0800037a        0x2 
+                0x08000380        0x2 build/startup_stm32f411xe.o
+                0x08000380                RTC_Alarm_IRQHandler
+                0x08000380                EXTI2_IRQHandler
+                0x08000380                DebugMon_Handler
+                0x08000380                SPI4_IRQHandler
+                0x08000380                TIM1_CC_IRQHandler
+                0x08000380                DMA2_Stream5_IRQHandler
+                0x08000380                HardFault_Handler
+                0x08000380                DMA1_Stream5_IRQHandler
+                0x08000380                SysTick_Handler
+                0x08000380                PVD_IRQHandler
+                0x08000380                SDIO_IRQHandler
+                0x08000380                TAMP_STAMP_IRQHandler
+                0x08000380                PendSV_Handler
+                0x08000380                NMI_Handler
+                0x08000380                EXTI3_IRQHandler
+                0x08000380                TIM1_UP_TIM10_IRQHandler
+                0x08000380                I2C3_ER_IRQHandler
+                0x08000380                EXTI0_IRQHandler
+                0x08000380                I2C2_EV_IRQHandler
+                0x08000380                DMA1_Stream2_IRQHandler
+                0x08000380                FPU_IRQHandler
+                0x08000380                UsageFault_Handler
+                0x08000380                DMA2_Stream2_IRQHandler
+                0x08000380                SPI1_IRQHandler
+                0x08000380                TIM1_BRK_TIM9_IRQHandler
+                0x08000380                DMA2_Stream3_IRQHandler
+                0x08000380                USART6_IRQHandler
+                0x08000380                DMA2_Stream0_IRQHandler
+                0x08000380                TIM4_IRQHandler
+                0x08000380                I2C1_EV_IRQHandler
+                0x08000380                DMA1_Stream6_IRQHandler
+                0x08000380                DMA1_Stream1_IRQHandler
+                0x08000380                TIM3_IRQHandler
+                0x08000380                RCC_IRQHandler
+                0x08000380                Default_Handler
+                0x08000380                EXTI15_10_IRQHandler
+                0x08000380                ADC_IRQHandler
+                0x08000380                DMA1_Stream7_IRQHandler
+                0x08000380                SPI5_IRQHandler
+                0x08000380                TIM5_IRQHandler
+                0x08000380                DMA2_Stream7_IRQHandler
+                0x08000380                I2C3_EV_IRQHandler
+                0x08000380                EXTI9_5_IRQHandler
+                0x08000380                RTC_WKUP_IRQHandler
+                0x08000380                SPI2_IRQHandler
+                0x08000380                MemManage_Handler
+                0x08000380                DMA1_Stream0_IRQHandler
+                0x08000380                SVC_Handler
+                0x08000380                EXTI4_IRQHandler
+                0x08000380                WWDG_IRQHandler
+                0x08000380                TIM2_IRQHandler
+                0x08000380                OTG_FS_WKUP_IRQHandler
+                0x08000380                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08000380                EXTI1_IRQHandler
+                0x08000380                USART2_IRQHandler
+                0x08000380                I2C2_ER_IRQHandler
+                0x08000380                DMA2_Stream1_IRQHandler
+                0x08000380                FLASH_IRQHandler
+                0x08000380                DMA2_Stream4_IRQHandler
+                0x08000380                BusFault_Handler
+                0x08000380                USART1_IRQHandler
+                0x08000380                OTG_FS_IRQHandler
+                0x08000380                SPI3_IRQHandler
+                0x08000380                DMA1_Stream4_IRQHandler
+                0x08000380                I2C1_ER_IRQHandler
+                0x08000380                DMA2_Stream6_IRQHandler
+                0x08000380                DMA1_Stream3_IRQHandler
+ *fill*         0x08000382        0x2 
  .text.__libc_init_array
-                0x0800037c       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                0x0800037c                __libc_init_array
+                0x08000384       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x08000384                __libc_init_array
  *(.glue_7)
- .glue_7        0x080003c4        0x0 linker stubs
+ .glue_7        0x080003cc        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080003c4        0x0 linker stubs
+ .glue_7t       0x080003cc        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080003c4        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x080003cc        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x080003c4        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080003c4                _init
- .init          0x080003c8        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080003cc        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080003cc                _init
+ .init          0x080003d0        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x080003d0        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080003d0                _fini
- .fini          0x080003d4        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x080003dc                . = ALIGN (0x4)
-                0x080003dc                _etext = .
+ .fini          0x080003d8        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080003d8                _fini
+ .fini          0x080003dc        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080003e4                . = ALIGN (0x4)
+                0x080003e4                _etext = .
 
-.vfp11_veneer   0x080003dc        0x0
- .vfp11_veneer  0x080003dc        0x0 linker stubs
+.vfp11_veneer   0x080003e4        0x0
+ .vfp11_veneer  0x080003e4        0x0 linker stubs
 
-.v4_bx          0x080003dc        0x0
- .v4_bx         0x080003dc        0x0 linker stubs
+.v4_bx          0x080003e4        0x0
+ .v4_bx         0x080003e4        0x0 linker stubs
 
-.iplt           0x080003dc        0x0
- .iplt          0x080003dc        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080003e4        0x0
+ .iplt          0x080003e4        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rel.dyn        0x080003dc        0x0
- .rel.iplt      0x080003dc        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080003e4        0x0
+ .rel.iplt      0x080003e4        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x080003dc        0x0
-                0x080003dc                . = ALIGN (0x4)
+.rodata         0x080003e4        0x0
+                0x080003e4                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
-                0x080003dc                . = ALIGN (0x4)
+                0x080003e4                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x080003dc        0x0
-                0x080003dc                __exidx_start = .
+.ARM            0x080003e4        0x0
+                0x080003e4                __exidx_start = .
  *(.ARM.exidx*)
-                0x080003dc                __exidx_end = .
+                0x080003e4                __exidx_end = .
 
-.preinit_array  0x080003dc        0x0
-                0x080003dc                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080003e4        0x0
+                0x080003e4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080003dc                PROVIDE (__preinit_array_end = .)
+                0x080003e4                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x080003dc        0x4
-                0x080003dc                PROVIDE (__init_array_start = .)
+.init_array     0x080003e4        0x4
+                0x080003e4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x080003dc        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x080003e0                PROVIDE (__init_array_end = .)
+ .init_array    0x080003e4        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080003e8                PROVIDE (__init_array_end = .)
 
-.fini_array     0x080003e0        0x4
+.fini_array     0x080003e8        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080003e0        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x080003e8        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x080003e4                _sidata = LOADADDR (.data)
+                0x080003ec                _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x0 load address 0x080003e4
+.data           0x20000000        0x0 load address 0x080003ec
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -287,11 +287,11 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _edata = .
 
-.igot.plt       0x20000000        0x0 load address 0x080003e4
+.igot.plt       0x20000000        0x0 load address 0x080003ec
  .igot.plt      0x20000000        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000000                . = ALIGN (0x4)
 
-.bss            0x20000000       0x1c load address 0x080003e4
+.bss            0x20000000       0x1c load address 0x080003ec
                 0x20000000                _sbss = .
                 0x20000000                __bss_start__ = _sbss
  *(.bss)
@@ -303,7 +303,7 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x2000001c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000001c      0x604 load address 0x080003e4
+                0x2000001c      0x604 load address 0x080003ec
                 0x20000020                . = ALIGN (0x8)
  *fill*         0x2000001c        0x4 
                 [!provide]                PROVIDE (end = .)
@@ -369,10 +369,10 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_ranges  0x00000018       0x18 build/system_stm32f4xx.o
  .debug_ranges  0x00000030       0x20 build/startup_stm32f411xe.o
 
-.debug_line     0x00000000      0x457
- .debug_line    0x00000000      0x1b3 build/main.o
- .debug_line    0x000001b3      0x22e build/system_stm32f4xx.o
- .debug_line    0x000003e1       0x76 build/startup_stm32f411xe.o
+.debug_line     0x00000000      0x45a
+ .debug_line    0x00000000      0x1b6 build/main.o
+ .debug_line    0x000001b6      0x22e build/system_stm32f4xx.o
+ .debug_line    0x000003e4       0x76 build/startup_stm32f411xe.o
 
 .debug_str      0x00000000      0x3bf
  .debug_str     0x00000000      0x2c3 build/main.o
